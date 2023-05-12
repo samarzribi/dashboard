@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <a href="https://icons8.com/icon/86527/home"></a> <a href="https://icons8.com"></a>
     <link rel="stylesheet"  href="../css/sideBar.css" />
+    <link rel="stylesheet" href="../css/nav.css">
+
     <title>Document</title>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div id="nav-search">
+           
+            <input type="search" > <img id="search-img" src = "./../assets/search.svg.svg" alt="My Happy SVG"/></input>
+        </div>
+        <div class="icons-nav">
+            <img id="msg" src="./../assets/message.png">
+            <button ></button>
+            <img id="notification" src="./../assets/notification.png">
+            <button></button>
+        </div>
+
+        <button id="navBtn">+ Create</button>
+        <img id="user-avatar"src="https://images.pexels.com/photos/1382726/pexels-photo-1382726.jpeg?cs=srgb&dl=pexels-tu%E1%BA%A5n-ki%E1%BB%87t-jr-1382726.jpg&fm=jpg"/>
+
+
+    </nav>
     <section class="container">
     <div class="sideBar">
         <ul class="sideBar_container">
@@ -38,9 +58,19 @@
     </div>
     <div class="customerList"></div>
     <hr>
-    </section>
-    
-    <script src="./../JS/userData.js"></script>
+</section>
+
+    <div class="container" style="display: none;">
+        <div id="modalContent">
+          <form id="form">
+            <label>Name: <input type="text" id="name" name="name"></label><br>
+            <label>Email: <input type="email" id="email" name="email"></label><br>
+            <button type="submit" id="submit">Submit</button>
+            <button type="button" id="cancel">Cancel</button>
+          </form>
+        </div>
+      </div>
+    <script src="../js/userData.js"></script>
 </body>
 
 </html>

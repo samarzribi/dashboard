@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <a href="https://icons8.com/icon/86527/home"></a> <a href="https://icons8.com"></a>
+    <link rel="stylesheet" href="../css/sideBar.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/filter.css" />
+
+    <title>Document</title>
 </head>
+
 <body>
-    <section>
-        <div class="productList">
-            
+    <nav class="navbar">
+        <div id="nav-search">
+           <div class="search-box"></div>
+            <input id="search"  type="search" > <img id="search-img"  onclick="search()" src = "./../assets/search.svg.svg" alt="My Happy SVG"/></input>
+            <ul id="search-results"></ul>
 
         </div>
+        <div class="icons-nav">
+            <img id="msg" src="./../assets/message.png">
+            <button ></button>
+            <img id="notification" src="./../assets/notification.png">
+            <button></button>
+        </div>
+
+        <button id="navBtn">+ Create</button>
+        <img id="user-avatar"src="https://images.pexels.com/photos/1382726/pexels-photo-1382726.jpeg?cs=srgb&dl=pexels-tu%E1%BA%A5n-ki%E1%BB%87t-jr-1382726.jpg&fm=jpg"/>
+
+
+    </nav>
+
+    <section class="container">
+
+        <div class="sideBar">
+            <ul class="sideBar_container">
+                <div class="sideBar_list">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtUlEQVR4nO3SP2oCQRhA8Z8WYitYS5qUYqFXsPMUdt4iV8gd0uUQAcXS1kYrEa3FToSRwAjLsv7dBQv3wYMphvcxH8M70cIs+n8ulDZWCNENukXF+9gl4mf3GOSND3HIiJ89YvRMuIKvK+G036jeG6/h54F4iP6ifivewN8T8RCdonkp/oF5jniILvCZjnewLiAeolv0kgOWBcZD4iWZ5A3f5GUD0pQDlCu6yCTjh4xz3CtxlRNLzeteM7X5aAAAAABJRU5ErkJggg==">
+                        <a href="../componenets/landingPage.html"><li>home</li></a>
+
+                </div>
+                <div class="sideBar_list">
+                    <img width="26" height="26" src="https://img.icons8.com/metro/26/gender-neutral-user.png"
+                        alt="gender-neutral-user" />
+                    <a href="../componenets/customerList.html"><li>customer list</li></a>
+                </div>
+                <div class="sideBar_list"><img width="30" height="30"
+                        src="https://img.icons8.com/ios-glyphs/30/product.png" alt="product" />
+                        <a href="../componenets/Products.html"><li>product list </li></a>
+                </div>
+                <div class="sideBar_list">
+                    <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/web-analystics.png"
+                        alt="web-analystics" />
+                    <li>analytics</li>
+                </div>
+            </ul>
+        </div>
+        <div class="productList"></div>
+        <div class="filtred"> test </div>
+
+    
+        <div id="results"></div>
     </section>
-    <script src="./../JS/userData.js"></script>
-    <a href="https://icons8.com/icon/86527/home"></a>
-    <a href="https://icons8.com"></a>
-    <link rel="stylesheet" href="../css/sideBar.css">
+
+   <script src="../js/products.js"></script>
+   <script src="../js/search.js"></script>
 </body>
+
 </html>

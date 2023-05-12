@@ -137,15 +137,6 @@ var customers = [
   },
 ];
 
-var deleteButtons = document.querySelectorAll("#deleteBtn");
-
-deleteButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    var customerDivs = document.querySelectorAll(".customer");
-    customerDivs[index].remove();
-  });
-});
-
 var productList = document.querySelector(".customerList");
 
 customers.forEach((customer) => {
@@ -169,9 +160,8 @@ function getProduct(customers) {
   for (var i = 0; i < customers.length; i++) {
     for (var key in customers[i] ){
       for (var j = 0; j < customers[i][key].length; j++){
-        //console.log("und",customers[i].productPurchase[j])
+
         if (!uniqueProd.includes(customers[i].productPurchase[j]) && typeof(customers[i].productPurchase[j])!== undefined){
-          console.log("typeOf",typeof(customers[i].productPurchase[j])!== undefined)
           uniqueProd.push(customers[i].productPurchase[j]);
     
        
@@ -182,9 +172,34 @@ function getProduct(customers) {
     
     
   }
- // console.log(uniqueProd)
   return uniqueProd;
 }
 
+var deleteButtons = document.querySelectorAll("#deleteBtn");
+
+deleteButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    var customerDivs = document.querySelectorAll(".customer");
+    customerDivs[index].remove();
+  });
+});
+
+
+
+editBtn.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    var customerDivs = document.querySelectorAll(".customer");
+    customerDivs[index].fullName = $('#name').val()
+    customerDivs[index].emailAddress = $('#email').val()
+
+  });
+});
+
+
+  
+
+  
+
+
 getProduct(customers);
-console.log(customers)
+
